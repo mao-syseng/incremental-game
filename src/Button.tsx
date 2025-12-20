@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Dialog } from "./Dialog";
 
 interface Props {
   label: string;
@@ -63,7 +64,7 @@ export default function Button({ label, onClick }: Props) {
   );
 }
 
-export function AboutButton() {
+export function InfoButton() {
   const [dialogRef, setDialogRef] = useState<HTMLDialogElement | null>(null);
 
   const handleClick = () => {
@@ -88,27 +89,12 @@ export function AboutButton() {
       >
         ⓘ
       </pre>
-      <dialog
-        ref={setDialogRef}
-        style={{
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          padding: "2ch",
-          minWidth: "10ch",
-        }}
-      >
-        <pre>
-          A game about Birbs
-          <br />
-          <br />
-          Inspired by Digseum
-          <br />
-          <br />
-          <Button label="Close" onClick={handleClose} />
-        </pre>
-      </dialog>
+      <Dialog ref={setDialogRef} onClose={handleClose} size="small">
+        A game about Birbs
+        <br />
+        <br />
+        Inspired by Digseum
+      </Dialog>
     </>
   );
 }

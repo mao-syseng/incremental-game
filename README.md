@@ -1,27 +1,40 @@
 # incremental-game
-Incremental game using web technologies
+Birbs
+
+Digseum like game using web technologies
+
 
 
 https://www.asciiart.eu/one-line/animals
 https://asky.lol/
 
 
-bird1:
+birds:
 ∽(‾▿‾)~
 ~(‾▿‾)∽
+~('▿')∽
+
+∠(u°)>
+  ⌊⌊
+
+∠(u°)>
+
 
 cat:
 ~(^._.)
 ∽(^._.)
 ∿(^._.)
 
+worms:
+/\,/\,/\,o
+,∧,∧,∧,∧,o
+.◠.◠.◠.◠.o
+.◠.∧.◠.∧.o
+.∧.◠.∧.◠.o
 
-bird2:
-∠(u°)>
-  ⌊⌊
 
-
-∠(u°)>
+snakes:
+∠=====≡:>
 
 
 
