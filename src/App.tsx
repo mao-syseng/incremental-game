@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./Button";
+import Button, { AboutButton } from "./Button";
 import Birb from "./Birb";
 import Title from "./Title";
 
@@ -8,6 +8,7 @@ function App() {
 
   return (
     <main>
+      <AboutButton />
       <Title />
       <Button label={`Count is ${count}`} onClick={() => setCount(count + 1)} />
       <Birb />

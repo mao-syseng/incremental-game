@@ -53,7 +53,6 @@ export default function Button({ label, onClick }: Props) {
       onMouseEnter={() => setIsHovered(true)}
       style={{
         cursor: "pointer",
-        userSelect: "none",
         width: `${text.length + 2}ch`,
       }}
     >
@@ -61,5 +60,55 @@ export default function Button({ label, onClick }: Props) {
       <br></br>|{text}|<br></br>
       {bottomBorder}
     </pre>
+  );
+}
+
+export function AboutButton() {
+  const [dialogRef, setDialogRef] = useState<HTMLDialogElement | null>(null);
+
+  const handleClick = () => {
+    dialogRef?.showModal();
+  };
+
+  const handleClose = () => {
+    dialogRef?.close();
+  };
+
+  return (
+    <>
+      <pre
+        onClick={handleClick}
+        style={{
+          position: "absolute",
+          top: "1ch",
+          right: "2ch",
+          cursor: "pointer",
+          width: "1ch",
+        }}
+      >
+        ⓘ
+      </pre>
+      <dialog
+        ref={setDialogRef}
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          padding: "2ch",
+          minWidth: "10ch",
+        }}
+      >
+        <pre>
+          A game about Birbs
+          <br />
+          <br />
+          Inspired by Digseum
+          <br />
+          <br />
+          <Button label="Close" onClick={handleClose} />
+        </pre>
+      </dialog>
+    </>
   );
 }

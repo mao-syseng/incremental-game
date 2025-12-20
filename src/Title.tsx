@@ -6,5 +6,5 @@ export default function Title() {
   \\ \\ \\L\\ \\\\ \\ \\ \\ \\/ \\ \\ \\L\\ \\/\\__, \`\\
    \\ \\____/ \\ \\_\\ \\_\\  \\ \\_,__/\\/\\____/
     \\/___/   \\/_/\\/_/   \\/___/  \\/___/ `;
-  return <pre style={{ marginBottom: "1ch" }}>{title1}</pre>;
+  return <pre>{title1}</pre>;
 }
