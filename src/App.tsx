@@ -8,7 +8,7 @@ function App() {
 
   return (
     <main>
-        <Title/>
+      <Title />
       <Button label={`Count is ${count}`} onClick={() => setCount(count + 1)} />
       <Birb />
     </main>

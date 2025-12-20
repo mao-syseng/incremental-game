@@ -16,21 +16,19 @@ export default function Button({ label, onClick }: Props) {
   const text = ` ${label} `;
 
   const getBorderChars = () => {
-    if (isPressed) {
+    if (isPressed)
       return {
         corner: pressedCornerChar,
         top: pressedBorderChar,
         bottom: pressedBorderChar,
       };
-    }
 
-    if (isHovered) {
+    if (isHovered)
       return {
         corner: hoverCornerChar,
         top: "‾",
         bottom: "_",
       };
-    }
 
     return {
       corner: cornerChar,
@@ -56,7 +54,7 @@ export default function Button({ label, onClick }: Props) {
       style={{
         cursor: "pointer",
         userSelect: "none",
-        width: "fit-content",
+        width: `${text.length + 2}ch`,
       }}
     >
       {topBorder}
