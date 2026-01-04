@@ -1,28 +1,34 @@
 type V = 0 | 1 | 2;
-export type Digit = 0|1|2|3|4|5|6|7|8|9;
-export type Pos = [Digit, Digit];
+export type Pos = [number, number];
 export type Dir = 0 | 1 | 2 | 3;
 
 export interface S {
   v: V;
   pos: Pos;
   dir: Dir;
-  p: number;
-  rc: number;
+  tickCount: number;
   trail: Pos[];
+  oppies: Pos[];
+  oppiesSaved: number;
+  maxOppies: number;
 }
 
 export type A =
   | { type: "set_p"; p: number }
   | { type: "set_view"; v: V }
   | { type: "set_dir"; dir: Dir }
+  | { type: "spin" }
+  | { type: "turn_left" }
+  | { type: "turn_right" }
   | { type: "tick" };
 
 export const defState: S = {
   v: 0,
   pos: [0, 0],
   dir: 1,
-  p: 0,
-  rc: 0,
+  tickCount: 0,
   trail: [],
+  oppies: [[5, 5]],
+  oppiesSaved: 0,
+  maxOppies: 5,
 };

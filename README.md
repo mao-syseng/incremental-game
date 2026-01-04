@@ -38,6 +38,7 @@ snakes:
 # Ideas
 - Spawn after certain time
 - Each round lasts 60 ish seconds 
+- could spawn crypt of necrodancer style enemies that move in specific patterns
 
 # Glossary
 Trying for fun to write Arthur Whitney style code
